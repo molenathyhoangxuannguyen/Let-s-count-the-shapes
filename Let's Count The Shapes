@@ -1,0 +1,31 @@
+import turtle
+
+def square (name, times):
+
+        for i in range(times):
+            name.begin_fill()
+            for i in range(4):
+                name.forward(50)
+                name.left(90)
+            name.color("#0000CD")
+            name.end_fill()
+            name.penup()
+            name.forward(100)
+            name.pendown()
+
+
+wn = turtle.Screen()
+wn.bgcolor("#E0FFFF")
+wn.screensize(1000,1000)
+mom = turtle.Turtle()
+mom.color("#0000CD")
+square(mom,4)
+wn.bye()
+
+
+Ans = input("How many squares were there?  ")
+
+if Ans == "4" :
+    print("Congratulations! There were 4 squares.")
+else:
+    print("Try again! You can do it!")
